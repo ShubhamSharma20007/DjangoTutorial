@@ -1,0 +1,13 @@
+{%include "emp_tem/home.html"%}
+<!--  -->
+
+{%block content%}
+
+<form action="" method="post">
+    {%csrf_token%}
+    <!--  -->
+    {{form.as_p}}
+    <button class="btn" type="submit">submit</button>
+</form>
+<!--  -->
+{%endblock%}

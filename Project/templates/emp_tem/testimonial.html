@@ -1,0 +1,33 @@
+{% include "emp_tem/home.html"%}
+<!--  -->
+
+{% block content%}
+
+<h1 class="text-center font-weight-semibold my-3">Testimonial Partiion</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Serial Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Picture</th>
+            <th scope="col">Rating</th>
+        </tr>
+    </thead>
+    <h1 class="text-center font-weight-bold my-4">List of Employee</h1>
+    <tbody>
+
+        {% for x in testidata %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.description}}</td>
+            <td><img src="/media/{{x.picture}}" style="max-width: 200px;" alt="" srcset=""></td>
+            <td>{{x.rating}}</td>
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+{% endblock%}

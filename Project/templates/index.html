@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if isactive %}
+    <h1>current time is {{crtdat}}</h1>
+
+    <br>
+    <h1> Student details : {{std_dets.name}}</h1>
+
+
+    <hr>
+    <h1>Your Favorite Programme</h1>
+
+    {% for x in values %}
+    <h1>{{x}}</h1>
+    {% endfor %}
+    <!--  -->
+    {% endif %}
+
+
+    <!-- send the form data into  view.py -->
+    <form method="post">
+        {% csrf_token %}
+        <label for=""> Name</label>
+        <input type="radio" placeholder="enter your name" name="name">
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>
